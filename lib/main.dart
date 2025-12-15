@@ -12,16 +12,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 165, 22, 22)),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.green,
+          backgroundColor: Color.fromARGB(255, 165, 22, 22),
           foregroundColor: Colors.white,
         ),
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('MyApp CS KMUTNB'),
+          title: const Text('Logo555'),
           actions: [
             Text('1'),
             IconButton(
@@ -39,25 +40,42 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
+              Image.asset(
+                'assets/images/logo1.png',
+                width: 120,
+              ),
               Text(
-                'Hello Test CS 222',
+                'Welcome to My Website',
                 style: TextStyle(fontSize: 20),
               ),
               Text(
-                'KMUTNB',
+                'enjoy to used',
+              ),
+              SizedBox(
+                height: 18,
+              ),
+              Text(
+                'สรุปรายละเอียดรายรับรายจ่าย',
+                style: TextStyle(fontSize: 16),
               ),
               Row(
                 children: [
-                  Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLZRdb0ADRBMLkkBQxGzsDxSmK2JdS8KgBQ&s',
-                    width: 120,
-                  ),
-                  Image.asset(
-                    'assets/images/toon1.jpeg',
-                    width: 120,
+                  Column(
+                    children: [
+                      Text('วันที่ชาร์จ'),
+                      Text('สถานีชาร์จ'),
+                      Text('ประเภทหัวชาร์จ'),
+                      Text('ระยะเวลาในการชาร์จ'),
+                      Text('จำนวนหน่อย'),
+                      SizedBox(
+                        height: 18,
+                      ),
+                      Text('ค่าบริการ')
+                    ],
                   ),
                 ],
               ),
+              Text(''),
               SizedBox(
                 height: 6,
               ),
