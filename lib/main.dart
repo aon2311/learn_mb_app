@@ -46,18 +46,21 @@ class MyApp extends StatelessWidget {
               Text(
                 'KMUTNB',
               ),
-              Image.network(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLZRdb0ADRBMLkkBQxGzsDxSmK2JdS8KgBQ&s',
-                width: 120,
-              ),
-              Image.asset(
-                'assets/images/toon1.jpeg',
-                width: 120,
+              Row(
+                children: [
+                  Image.network(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLZRdb0ADRBMLkkBQxGzsDxSmK2JdS8KgBQ&s',
+                    width: 120,
+                  ),
+                  Image.asset(
+                    'assets/images/toon1.jpeg',
+                    width: 120,
+                  ),
+                ],
               ),
               SizedBox(
                 height: 6,
               ),
-                
               ElevatedButton(
                   onPressed: () {
                     debugPrint('pressed botton 1');
