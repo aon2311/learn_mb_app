@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(fontSize: 16),
               ),
               const Divider(),
-              buildRow(Icon(Icons.calculate), 'วันที่ชาร์จ', '20 ธ.ค. 2567'),
+              buildRow(Icon(Icons.dataset), 'วันที่ชาร์จ', '20 ธ.ค. 2567'),
               buildRow(Icon(Icons.local_atm), 'สถานที่ชาร์จ', 'สาขาวงสว่างค์'),
               buildRow(Icon(Icons.ev_station), 'ประเภทหัวชาร์จ', '#1'),
               buildRow(Icon(Icons.timer), 'ระยะเวลาในการชาร์จ', '00:12:00'),
