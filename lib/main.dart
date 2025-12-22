@@ -7,43 +7,21 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  Widget buildRow(Icon icon, String title, String value) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
-      child: Row(
-        children: [
-          icon,
-          const SizedBox(width: 10),
-          Text(
-            title,
-            style: const TextStyle(fontSize: 14),
-          ),
-          const Spacer(),
-          Text(
-            value,
-            style: const TextStyle(fontSize: 14),
-          ),
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 165, 22, 22)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 165, 22, 22),
+          backgroundColor: Colors.green,
           foregroundColor: Colors.white,
         ),
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Logo555'),
+          title: const Text('MyApp CS KMUTNB'),
           actions: [
             Text('1'),
             IconButton(
@@ -58,54 +36,174 @@ class MyApp extends StatelessWidget {
               },
               icon: Icon(Icons.menu)),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Image.asset(
-                'assets/images/logo1.png',
-                width: 120,
-              ),
-              Text(
-                'Welcome to My Website',
-                style: TextStyle(fontSize: 20),
-              ),
-              Text(
-                'enjoy to used',
-              ),
-              SizedBox(
-                height: 18,
-              ),
-              Text(
-                'สรุปรายละเอียดรายรับรายจ่าย',
-                style: TextStyle(fontSize: 16),
-              ),
-              const Divider(),
-              buildRow(Icon(Icons.dataset), 'วันที่ชาร์จ', '20 ธ.ค. 2567'),
-              buildRow(Icon(Icons.local_atm), 'สถานที่ชาร์จ', 'สาขาวงสว่างค์'),
-              buildRow(Icon(Icons.ev_station), 'ประเภทหัวชาร์จ', '#1'),
-              buildRow(Icon(Icons.timer), 'ระยะเวลาในการชาร์จ', '00:12:00'),
-              buildRow(Icon(Icons.bolt), 'จำนวนหน่อวย', '9.5  kWh'),
-              const Divider(height: 24),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'ค่าบริการทั้งสิ้น',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'Hello Test CS 222',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Text(
+                  'KMUTNB',
+                ),
+                Text(
+                  'What',
+                  style: TextStyle(fontSize: 20),
+                ),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.network(
+                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLZRdb0ADRBMLkkBQxGzsDxSmK2JdS8KgBQ&s',
+                          width: 120,
+                        ),
+                        Text('เห็ด')
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/images/toon1.jpeg',
+                          width: 120,
+                        ),
+                        Text('data'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo1.png',
+                          width: 120,
+                        ),
+                        Column(
+                          children: [
+                            Text('Logo',
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold)),
+                            Text(
+                              'jjjjjjjjjjjjjjjjjjjjjjjjjj',
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/images/toon1.jpeg',
+                          width: 120,
+                        ),
+                        Text('data'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/images/logo1.png',
+                          width: 120,
+                        ),
+                        Column(
+                          children: [
+                            Text('Logo',
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold)),
+                            Text(
+                              'jjjjjjjjjjjjjjjjjjjjjjjjjj',
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset(
+                      'assets/images/logo1.png',
+                      width: 120,
+                    ),
+                    Column(
+                      children: [
+                        Text('Logo',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold)),
+                        Text(
+                          'jjjjjjjjjjjjjjjjjjjjjjjjjj',
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton.outlined(onPressed: () {}, icon: Icon(Icons.abc)),
+                    Text('data'),
+                    Text('data333'),
+                  ],
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                Card(
+                  color: const Color.fromARGB(255, 197, 231, 158),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 60, vertical: 20),
+                    child: Text(
+                      'data',
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
-                  Text(
-                    '50 บาท',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                ),
+                Container(padding: EdgeInsets.symmetric(horizontal: 60,vertical: 20),
+                  
+                  decoration: const BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromARGB(255, 255, 133, 149),
+                        spreadRadius: 2,
+                        blurRadius: 6,
+                        offset: Offset(0, 0)
+                      )
+                    ]
                   ),
-                ],
-              )
-            ],
+          
+                  
+                  child: Text(
+                    'history',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+                const TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Password',
+                    hintText: 'Enter Password'
+                  ),
+                ),
+          
+                ElevatedButton(
+                    onPressed: () {
+                      debugPrint('pressed botton 1');
+                    },
+                    child: Text(
+                      "OK Botton",
+                      style: TextStyle(fontSize: 18),
+                    ))
+              ],
+            ),
           ),
         ),
       ),
